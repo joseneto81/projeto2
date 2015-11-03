@@ -22,10 +22,13 @@ class Aluno{
 
 	public function NotaFinal()
 	{
-		return ($this->acertos/$this->peso);
+		IF(!$this->acertos)
+			return "Qutde de acertos não informados";
+                ELSE
+			return ($this->acertos * $this->peso);
 	}
 
-	public function setAcertos($acetos)
+	public function setAcertos($acertos)
 	{
 		$this->acertos = $acertos;
 	}
@@ -36,6 +39,8 @@ class Aluno{
 
 }
 
-$a = new Aluno("Carlos",5);
+$a = new Aluno();
+$a->setNome("Carlos");
+//$a->setAcertos(5);
 echo "Aluno ".$a->getNome()." obteve nota: ".$a->NotaFinal()."\n";
 ?>
