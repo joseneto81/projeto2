@@ -24,6 +24,16 @@ class Aluno{
 	{
 		return ($this->acertos/$this->peso);
 	}
+
+	public function setAcertos($acetos)
+	{
+		$this->acertos = $acertos;
+	}
+	public function getAcertos()
+	{
+		return $this->acertos;
+	}
+
 }
 
 $a = new Aluno("Carlos",5);
