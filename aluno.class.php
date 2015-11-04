@@ -39,8 +39,6 @@ class Aluno{
 
 }
 
-$a = new Aluno();
-$a->setNome("Carlos");
-//$a->setAcertos(5);
+$a = new Aluno("José Carlos",5);
 echo "Aluno ".$a->getNome()." obteve nota: ".$a->NotaFinal()."\n";
 ?>
